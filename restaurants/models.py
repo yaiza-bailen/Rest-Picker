@@ -6,7 +6,7 @@ class Food(models.Model):
     def __unicode__(self):
         return self.name
 
-class City(models.Model):
+class Town(models.Model):
     name = models.CharField(max_length=30)
 
     def __unicode__(self):
@@ -22,7 +22,7 @@ class Restaurant(models.Model):
     post_code = models.CharField(max_length=20)
 
     food = models.ForeignKey(Food)
-    city = models.ForeignKey(City)
+    town = models.ForeignKey(Town)
 
     def __unicode__(self):
         return self.name
