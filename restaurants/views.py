@@ -11,7 +11,7 @@ def choose_town(request, food_id):
             town_list.append(c)
     return render(request, 'restaurants/choose_town.html', {'food_id':food_id, 'town_list':town_list})
 
-def rest_list(request,food_id,town_id):
+def choose_restaurant(request,food_id,town_id):
     rests = Restaurant.objects.filter(food__id=food_id, town__id=town_id)
     return render(request, 'restaurants/choose_restaurant.html', {'rests':rests})
 
