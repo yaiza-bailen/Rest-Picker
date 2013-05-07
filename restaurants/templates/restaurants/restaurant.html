@@ -31,7 +31,9 @@
     		<p><strong>{{ restaurant.desc}}</strong></p>
 	    	<p> On the menu: </p>
 		    	<ul> 
-			    	<li>{{ restaurant.menu }}</li>
+                    {% for m in rest_menu %}
+                        <li>{{m}}</li>
+                    {% endfor %}
 	    		</ul>			
 		</div>		
 
@@ -47,7 +49,7 @@
 		<div class="ui-block-a">
     		<h2> Contact us</h2>
 	    	<p>{{ restaurant.address }}</p>
-		    <p>{{restaurant.post_code}} {{restaurant.city }}</p>		
+		    <p>{{restaurant.post_code}} {{restaurant.town }}</p>		
 		</div>
 		
 		<div class="ui-block-b">
