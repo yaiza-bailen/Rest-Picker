@@ -14,5 +14,5 @@ urlpatterns = patterns('restaurants.views',
         DetailView.as_view(
             model=Restaurant,
             template_name='restaurants/restaurant.html'),
-        name='rest_detail'),
+        name='restaurant'),
 )
