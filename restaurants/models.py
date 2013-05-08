@@ -24,6 +24,14 @@ class Restaurant(models.Model):
     food = models.ForeignKey(Food)
     town = models.ForeignKey(Town)
 
+    STARS = (
+        (1,'one'),
+        (2,'two'),
+        (3,'three'),
+        (4,'four'),
+    )
+    votes = models.IntegerField(choices=STARS, default=4)
+
     def __unicode__(self):
         return self.name
 

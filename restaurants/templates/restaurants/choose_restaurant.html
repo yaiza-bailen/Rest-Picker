@@ -28,7 +28,7 @@
             {% if rests %}	
                 <ul data-role="listview" data-inset="true" >
                     {% for r in rests %}
-                        <li><a href="{% url 'restaurants:restaurant' r.id%}" data-transition="slidedown"> <img src="restau01_mini.jpg"/> <h2>{{ r.name }}</h2> <p class="classement four"> 4 stars  </p></a></li>
+                    <li><a href="{% url 'restaurants:restaurant' r.id%}" data-transition="slidedown"> <img src="restau01_mini.jpg"/> <h2>{{ r.name }}</h2> <p class="classement {{r.get_votes_display}}"> 4 stars  </p></a></li>
                     {% endfor %}
                 </ul>	
             {% endif %}
