@@ -243,15 +243,15 @@ left:0px;
 background-position: -75px -182px;
 }
 .two #note_utilisateur-button span.ui-btn-text,
-#note_utilisateur-menu li + li a:before{
+#note_utilisateur-menu li + li + li a:before{
 background-position: -52px -182px;
 }
 .three #note_utilisateur-button span.ui-btn-text,
-#note_utilisateur-menu li + li +li a:before{
+#note_utilisateur-menu li + li + li +li a:before{
 background-position: -27px -182px;
 }
 .four #note_utilisateur-button span.ui-btn-text,
-#note_utilisateur-menu li + li +li +li a:before{
+#note_utilisateur-menu li + li + li +li +li a:before{
 background-position: -2px -182px;
 }
 

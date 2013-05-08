@@ -25,6 +25,7 @@
 	</div> 
 	
 	<div data-role="content">
+        {% if message %}<p><strong>{{ message }}</strong></p>{% endif %}
 	<div class="ui-grid-a" id="restau_infos">	
 		<div class="ui-block-a">
 		    <h1>{{ restaurant.name }}</h1>
@@ -64,19 +65,21 @@
 	<hr/>
 	
 	<div id="notation">	
-	<form>
-	<label for="select-choice-0" class="select"><h2> User rating </h2></label>
-		<select name="note_utilisateur" id="note_utilisateur" data-native-menu="false" data-theme="c" >
-		   <option value="one" class="one"> Not good at all </option>
-		   <option value="two" class="two">Average </option>
-		   <option value="three" class="three">Pretty good </option>
-		   <option value="four" class="four"> Excellent </option>
+        <form action="{% url 'restaurants:vote' restaurant.id %}" method="post">
+        {% csrf_token %}
+	    <label for="select-choice-0" class="select"><h2> User rating </h2></label>
+		<select name="note_utilisateur" onchange="this.form.submit()" id="note_utilisateur" data-native-menu="false" data-theme="c" >
+           <option>Choose your vote</option>
+		   <option value="1" class="one"> Not good at all </option>
+		   <option value="2" class="two">Average </option>
+		   <option value="3" class="three">Pretty good </option>
+		   <option value="4" class="four"> Excellent </option>
 		</select>	
 	</form>
 	</div>
 
 
-	<!--script type="text/javascript">
+	<script type="text/javascript">
 
 	$( '#restau' ).live( 'pageinit',function(event){
 		var SelectedOptionClass = $('option:selected').attr('class');
@@ -93,7 +96,7 @@
 	  
 	});
 
-	</script-->
+	</script>
 	
 
 	</div>

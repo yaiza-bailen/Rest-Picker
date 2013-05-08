@@ -11,4 +11,5 @@ urlpatterns = patterns('restaurants.views',
     url(r'^food/(?P<food_id>\d+)/$', 'choose_town', name='choose_town'),
     url(r'^food/(?P<food_id>\d+)/town/(?P<town_id>\d+)/$', 'choose_restaurant', name='choose_restaurant'),
     url(r'^rest/(?P<rest_id>\d+)/$', 'restaurant', name='restaurant'),
+    url(r'^(?P<rest_id>\d+)/vote/$', 'vote', name='vote'),
 )
