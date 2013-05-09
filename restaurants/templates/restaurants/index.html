@@ -31,7 +31,7 @@
         {% if food_list %}	
     	    <ul data-role="listview" data-inset="true" >
                 {% for f in food_list %}
-                <li><a href="{% url 'restaurants:choose_town' f.id %}" data-transition="slidedown"><h3>{{ f.name }}</h3></a></li>
+                <li><a href="{% url 'restaurants:choose_town' f.id %}" data-transition="slidedown"><img src={{f.picture.url}}/><h3>{{ f.name }}</h3></a></li>
                 {% endfor %}
     	    </ul>	
 	    {% endif%}

@@ -2,6 +2,7 @@ from django.db import models
 
 class Food(models.Model):
     name = models.CharField(max_length=30)
+    picture = models.ImageField(upload_to='images/', null=True)
 
     def __unicode__(self):
         return self.name
@@ -20,6 +21,7 @@ class Restaurant(models.Model):
     phone = models.CharField(max_length=40)
     address = models.CharField(max_length=100)
     post_code = models.CharField(max_length=20)
+    picture = models.ImageField(upload_to='images/', null=True)
 
     food = models.ForeignKey(Food)
     town = models.ForeignKey(Town)

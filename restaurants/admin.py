@@ -7,6 +7,7 @@ class RestaurantAdmin(admin.ModelAdmin):
             ('Address',{'fields':['address','post_code','town']}),
             ('Contact',{'fields':['web','phone']}),
             ('Food',{'fields':['food']}),
+            ('Picture',{'fields':['picture']}),
             ]
 
 admin.site.register(Restaurant,RestaurantAdmin)

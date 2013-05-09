@@ -39,8 +39,8 @@
 		</div>		
 
 		<div class="ui-block-b">
-    		<p><img src="restau01.jpg" alt="jeannette photo"/></p>
-	    	<p><a href="{{ restaurant.web }}" rel="external" data-role="button"> See our website</a></p>
+            <p><img src={{ restaurant.picture.url }} alt={{restaurant.name}} /></p>
+	    	<p><a href="{{ restaurant.web }}" rel="external" data-role="button">See our website</a></p>
 		</div>
 	</div><!-- /grid-a -->
 
@@ -60,7 +60,7 @@
 
 	<div id="contact_buttons">	
 		<a href="http://maps.google.fr/maps?q=jeannette+et+les+cycleux&hl=fr&sll=46.75984,1.738281&sspn=10.221882,18.764648&hq=jeannette+et+les+cycleux&t=m&z=13&iwloc=A" data-role="button" data-icon="maps"> Find us on Google Maps </a> 	
-		<a href="tel:"+"{{restaurant.phone}}"  data-role="button" data-icon="tel"> Call us </a>	
+		<a href="tel:{{restaurant.phone}}"  data-role="button" data-icon="tel"> Call us </a>	
 	</div>	
 	<hr/>
 	
