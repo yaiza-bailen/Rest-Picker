@@ -27,8 +27,9 @@
         	<h1> In which town do you want to eat? </h1>
 	        {% if town_list %}
             	<ul data-role="listview" data-inset="true" data-filter="true"  >
-                    {% for t in town_list %}
-                    	<li><a href="{% url 'restaurants:choose_restaurant' food_id t.id %}"  data-transition="slidedown">{{ t.name }}<span class="ui-li-count" > 3 </span></a> </li>
+                    {% for town_dict in town_list %}
+                            <li><a href="{% url 'restaurants:choose_restaurant' food_id town_dict.town.id %}"  data-transition="slidedown">{{ town_dict.town.name }}<span class="ui-li-count">{{ town_dict.count }}</span></a> </li>
+
                     {% endfor %}
 	            </ul>
             {% endif %}

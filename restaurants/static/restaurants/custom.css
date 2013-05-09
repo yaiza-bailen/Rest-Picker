@@ -239,7 +239,7 @@ position:absolute;
 left:0px;
 }
 .one #note_utilisateur-button span.ui-btn-text,
-#note_utilisateur-menu li a:before{
+#note_utilisateur-menu li + li a:before{
 background-position: -75px -182px;
 }
 .two #note_utilisateur-button span.ui-btn-text,
