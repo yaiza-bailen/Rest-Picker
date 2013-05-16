@@ -5,9 +5,9 @@ class RestaurantAdmin(admin.ModelAdmin):
     fieldsets = [
             ('Description',{'fields': ['name','desc','menu']}),
             ('Address',{'fields':['address','post_code','town']}),
-            ('Contact',{'fields':['web','phone']}),
+            ('Contact',{'fields':['web','gmap_url','phone']}),
             ('Food',{'fields':['food']}),
-            ('Picture',{'fields':['picture']}),
+            ('Pictures',{'fields':['picture','map']}),
             ]
 
 admin.site.register(Restaurant,RestaurantAdmin)

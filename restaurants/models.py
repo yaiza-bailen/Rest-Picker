@@ -22,6 +22,8 @@ class Restaurant(models.Model):
     address = models.CharField(max_length=100)
     post_code = models.CharField(max_length=20)
     picture = models.ImageField(upload_to='images/', null=True)
+    map = models.ImageField(upload_to='images/', null=True)
+    gmap_url = models.CharField(max_length=200, null=True)
 
     food = models.ForeignKey(Food)
     town = models.ForeignKey(Town)

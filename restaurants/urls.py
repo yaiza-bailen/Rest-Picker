@@ -6,7 +6,7 @@ from django.conf import settings
 urlpatterns = patterns('restaurants.views',
     url(r'^$',
         ListView.as_view(
-            queryset=Food.objects.all(),
+            model=Food,
             template_name='restaurants/index.html'),
         name='index'),
     url(r'^food/(?P<food_id>\d+)/$', 'choose_town', name='choose_town'),
@@ -15,7 +15,6 @@ urlpatterns = patterns('restaurants.views',
     url(r'^(?P<rest_id>\d+)/vote/$', 'vote', name='vote'),
 )
 
-print settings.DEBUG
 if settings.DEBUG:
     # static files (images, css, javascript, etc.)
     urlpatterns += patterns('',

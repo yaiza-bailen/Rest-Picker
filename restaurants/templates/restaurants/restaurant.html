@@ -49,17 +49,17 @@
 	<div class="ui-grid-a" id="contact_infos">	
 		<div class="ui-block-a">
     		<h2> Contact us</h2>
-	    	<p>{{ restaurant.address }}</p>
+	    	<p>{{restaurant.address}}</p>
 		    <p>{{restaurant.post_code}} {{restaurant.town }}</p>		
 		</div>
 		
 		<div class="ui-block-b">
-    		<img src="01_maps.jpg" alt="plan jeanette"/>
+            <img src={{restaurant.map.url}} alt="map" />
 		</div>
 	</div><!-- /grid-a -->
 
 	<div id="contact_buttons">	
-		<a href="http://maps.google.fr/maps?q=jeannette+et+les+cycleux&hl=fr&sll=46.75984,1.738281&sspn=10.221882,18.764648&hq=jeannette+et+les+cycleux&t=m&z=13&iwloc=A" data-role="button" data-icon="maps"> Find us on Google Maps </a> 	
+        <a href="{{restaurant.gmap_url}}" data-role="button" data-icon="maps"> Find us on Google Maps </a> 	
 		<a href="tel:{{restaurant.phone}}"  data-role="button" data-icon="tel"> Call us </a>	
 	</div>	
 	<hr/>
